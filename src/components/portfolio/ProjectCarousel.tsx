@@ -78,7 +78,7 @@ function ProjectCarousel({ query }: { query: string }) {
           >
             <img className="absolute inset-0 h-full w-full object-cover object-center" src={project.image.replace('w=700&h=340', 'w=2000&h=1200')} alt="" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,18,39,.88)_0%,rgba(4,18,39,.66)_42%,rgba(4,18,39,.08)_100%),linear-gradient(0deg,rgba(4,18,39,.55),transparent_45%)]" />
-            <div className="relative mx-auto flex h-full w-[min(1280px,calc(100%-72px))] flex-col justify-center pb-8 max-[980px]:w-[min(calc(100%-48px),760px)] max-[700px]:w-[calc(100%-36px)] max-[700px]:justify-end max-[700px]:pb-16">
+            <div className="relative mx-auto flex h-full w-[min(1280px,calc(100%-72px))] flex-col justify-end pb-8 max-[980px]:w-[min(calc(100%-48px),760px)] max-[700px]:w-[calc(100%-36px)] max-[700px]:justify-end max-[700px]:pb-16">
               <p className="mb-5 flex items-center gap-3 text-[11px] font-extrabold tracking-[2px] text-cyan-200 uppercase"><span className="h-px w-9 bg-cyan-300" />Selected work · {String(index + 1).padStart(2, '0')}</p>
               <span className="mb-4 w-fit rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] font-bold text-white backdrop-blur-sm">{project.category}</span>
               <h2 className="max-w-[760px] text-[clamp(48px,8vw,104px)] leading-[.92] font-extrabold tracking-[-2px] text-white max-[700px]:text-[clamp(46px,13vw,76px)]">{project.name}</h2>
