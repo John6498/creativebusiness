@@ -1,44 +1,7 @@
-type Service = {
-  title: string
-  description: string
-  icon: 'code' | 'mobile' | 'cloud'
-  accent: 'blue' | 'violet' | 'cyan'
-  href: string
-}
+import ArrowIcon from '../icons/ArrowIcon'
+import { featuredServices, type FeaturedService } from '../../data/siteData'
 
-const services: Service[] = [
-  {
-    title: 'Web Development',
-    description: 'Modern, fast and responsive websites that turn visitors into customers.',
-    icon: 'code',
-    accent: 'blue',
-    href: '#contact',
-  },
-  {
-    title: 'Mobile Applications',
-    description: 'Powerful and scalable mobile apps for iOS and Android platforms.',
-    icon: 'mobile',
-    accent: 'violet',
-    href: '#contact',
-  },
-  {
-    title: 'Cloud & DevOps',
-    description: 'Reliable infrastructure and deployment for high performance and security.',
-    icon: 'cloud',
-    accent: 'cyan',
-    href: '#contact',
-  },
-]
-
-function ArrowIcon() {
-  return (
-    <svg className="h-[17px] w-[17px] fill-none stroke-current [stroke-width:1.8]" viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M3.5 10h12m-5-5 5 5-5 5" />
-    </svg>
-  )
-}
-
-function ServiceIcon({ name }: { name: Service['icon'] }) {
+function ServiceIcon({ name }: { name: FeaturedService['icon'] }) {
   const iconClass = 'h-[29px] w-[29px] fill-none stroke-white [stroke-width:2.1] [stroke-linecap:round] [stroke-linejoin:round]'
 
   if (name === 'mobile') {
@@ -66,7 +29,7 @@ function ServiceIcon({ name }: { name: Service['icon'] }) {
 }
 
 function Services({ query }: { query: string }) {
-  const filteredServices = services.filter((service) =>
+  const filteredServices = featuredServices.filter((service) =>
     `${service.title} ${service.description}`.toLowerCase().includes(query.toLowerCase()),
   )
 

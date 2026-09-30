@@ -54,16 +54,14 @@
 
 .caption-dot { box-shadow: 0 0 12px #09e3d3; }
 .service-card::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  right: -76px;
-  bottom: -93px;
-  width: 130px;
-  height: 130px;
-  border: 12px solid var(--wash);
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px var(--wash-soft);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: -99px;
+    bottom: -129px;
+    border: 6em solid var(--wash);
+    border-radius: 50%;
+    box-shadow: 0 1em 0 2.5em var(--wash-soft);
 }
 .service-blue { --wash: rgba(45, 167, 255, .45); --wash-soft: rgba(45, 167, 255, .14); --icon-a: #51a1ff; --icon-b: #086bff; }
 .service-violet { --wash: rgba(134, 107, 255, .4); --wash-soft: rgba(134, 107, 255, .13); --icon-a: #9567ff; --icon-b: #4233ed; }
@@ -78,4 +76,31 @@
   .service-card { min-height: 180px; padding: 14px 18px 12px; }
   .service-icon { width: 46px; height: 46px; margin-bottom: 7px; border-radius: 16px; }
   .service-card p { min-height: 34px; margin-bottom: 6px; }
+}
+
+@media (max-height: 800px) and (min-width: 701px) {
+  .portfolio-carousel h2 { font-size: 52px !important; }
+  .portfolio-carousel article > div.relative { justify-content: flex-end; padding-bottom: 10px; }
+  .portfolio-carousel article > div.relative > p:first-child { margin-bottom: 6px; }
+  .portfolio-carousel article > div.relative > span { margin-bottom: 6px; }
+  .portfolio-carousel article > div.relative > p:nth-of-type(2) { margin-top: 6px; }
+  .portfolio-carousel article > div.relative > a { min-height: 36px; margin-top: 8px; }
+  .about-page { gap: 7px; padding-bottom: 8px; }
+  .about-page > section:first-child { min-height: 190px; }
+  .about-page > section:first-child .hero-image { height: 190px; }
+  .about-page > section:nth-child(2) article { min-height: 70px; }
+  .about-page > section:nth-child(3) { min-height: 160px; gap: 8px; padding: 4px; }
+  .about-page > section:nth-child(3) img { height: 144px; }
+}
+
+@media (max-height: 680px) and (min-width: 701px) {
+  .about-page { min-height: calc(100svh - 218px); padding-bottom: 0 !important; }
+  .about-page { gap: 3px; }
+  .about-page > section:first-child { min-height: 180px; }
+  .about-page > section:first-child h1 { font-size: 34px !important; }
+  .about-page > section:first-child .hero-image { height: 160px; }
+  .about-page > section:nth-child(2) article { min-height: 64px; padding-block: 6px; }
+  .about-page > section:nth-child(3) { min-height: 144px; gap: 6px; }
+  .about-page > section:nth-child(3) img { height: 128px; }
+  .about-page > section:nth-child(3) > div:nth-child(3) article { padding-block: 6px; }
 }

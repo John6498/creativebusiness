@@ -1,12 +1,5 @@
-import Services from './Services'
-
-function ArrowIcon() {
-  return (
-    <svg className="h-[17px] w-[17px] fill-none stroke-current [stroke-width:1.8]" viewBox="0 0 20 20" aria-hidden="true">
-      <path d="M3.5 10h12m-5-5 5 5-5 5" />
-    </svg>
-  )
-}
+import Services from '../components/services/Services'
+import ArrowIcon from '../components/icons/ArrowIcon'
 
 function HomePage({ query }: { query: string }) {
   return (
@@ -16,7 +9,7 @@ function HomePage({ query }: { query: string }) {
           <p className="mb-[13px] text-[11px] leading-[1.4] font-extrabold tracking-[2px] text-[#6484be] uppercase">Innovative software solutions</p>
           <h1 className="m-0 max-w-[570px] text-[clamp(39px,4vw,58px)] leading-[1.06] font-extrabold text-ink max-[980px]:text-[clamp(36px,5vw,48px)] max-[700px]:text-[clamp(38px,10vw,51px)]" id="hero-title">We Build Digital<br className="max-[700px]:hidden" /> Solutions for a<br className="max-[700px]:hidden" /> <span className="bg-[linear-gradient(95deg,#04a9ed_0%,#076dff_65%,#875bff_100%)] bg-clip-text text-transparent [-webkit-text-fill-color:transparent]">Smarter Tomorrow</span></h1>
           <p className="mt-[17px] mb-5 max-w-[480px] text-sm leading-[1.55] text-copy">CBT is a technology company focused on delivering high-quality software solutions, web and mobile applications that help businesses grow, innovate and stay ahead.</p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 m-[1em_0]">
             <a className="inline-flex min-h-[47px] items-center justify-center gap-4 rounded-[18px] border border-transparent bg-[linear-gradient(105deg,#0765f7_0%,#00c6dc_35%,#765bff_65%,#0765f7_100%)] [background-size:250%_250%] animate-gradient-flow motion-reduce:animate-none px-[22px] text-[13px] font-bold text-white no-underline shadow-[0_7px_17px_rgba(0,121,244,.15)] transition hover:-translate-y-0.5 hover:shadow-[0_10px_22px_rgba(0,121,244,.24)]" href="#portfolio">View Our Work <ArrowIcon /></a>
             <a className="inline-flex min-h-[47px] items-center justify-center gap-4 rounded-[18px] border border-[#5aa7ff] bg-white/70 px-[22px] text-[13px] font-bold text-ink no-underline transition hover:-translate-y-0.5 hover:bg-white" href="mailto:hello@cbt.tech">Start a Project <ArrowIcon /></a>
           </div>
