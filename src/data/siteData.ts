@@ -104,12 +104,20 @@ export const portfolioImpact = [
   { value: '99%', label: 'Client Satisfaction', icon: '◉' },
 ]
 
-export const portfolioTestimonial = {
-  name: 'Sophia Garcia',
-  role: 'CEO, Nova Creative',
-  image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
-  quote: 'CBT delivered exactly what we needed: a modern, fast, and reliable platform. Their team is professional, creative, and always responsive.',
-}
+export const portfolioReviews = [
+  {
+    name: 'Sophia Garcia',
+    role: 'CEO, Nova Creative',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
+    quote: 'CBT delivered eiable platform. Their team is professional, creative, and always responsive.',
+  },
+  {
+    name: 'Sophia Garcia',
+    role: 'CEO, Nova',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
+    quote: 'CBT delivered exactly what we needed: a modern, fast, and reliable platform. Their team is professional, creative, and always responsive.',
+  },
+]
 
 export const contactDetails = {
   phone: '+1 (555) 123-4567',

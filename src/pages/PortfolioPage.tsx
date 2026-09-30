@@ -1,6 +1,7 @@
 import ProjectCarousel from '../components/portfolio/ProjectCarousel'
+import ReviewCarousel from '../components/portfolio/ReviewCarousel.tsx'
 import ArrowIcon from '../components/icons/ArrowIcon'
-import { portfolioImpact, portfolioTestimonial } from '../data/siteData'
+import { portfolioImpact } from '../data/siteData'
 
 function PortfolioPage({ query }: { query: string }) {
   return (
@@ -13,10 +14,7 @@ function PortfolioPage({ query }: { query: string }) {
       </section>
 
       <section className="mx-auto mt-3 grid w-[min(1280px,calc(100%-72px))] grid-cols-[1.2fr_.8fr] gap-3 max-[980px]:w-[min(calc(100%-48px),760px)] max-[700px]:w-[calc(100%-36px)] max-[700px]:grid-cols-1 min-[701px]:mt-0">
-        <blockquote className="flex items-center gap-3 rounded-xl bg-white/75 px-4 py-3">
-          <img className="h-20 w-20 rounded-full object-cover" src={portfolioTestimonial.image} alt={portfolioTestimonial.name} loading="lazy" />
-          <div><span className="text-xl leading-none font-black text-blue-500">“</span><p className="text-[12px] leading-[1.45] text-copy">{portfolioTestimonial.quote}</p><cite className="mt-1 block text-[11px] font-bold not-italic text-[#17376e]">{portfolioTestimonial.name} <span className="font-normal text-[#7186a8]">· {portfolioTestimonial.role}</span></cite></div>
-        </blockquote>
+        <ReviewCarousel />
         <div className="flex items-center gap-3 rounded-xl bg-[#eaf6ff] px-6 py-6">
           <span className="grid h-20 w-20 shrink-0 place-items-center rounded-full bg-white text-[20px] text-blue-500">✧</span>
           <div className="mr-auto"><h2 className="text-[1em] font-extrabold text-ink">Have a Project in Mind?</h2><p className="text-[14px] text-copy p-1">Let’s turn your idea into a powerful digital solution.</p><a className="mt-1 inline-flex items-center gap-2 rounded-full bg-[linear-gradient(100deg,#0765f7,#00c6dc)] px-6 py-2 text-[13px] font-bold text-white no-underline" href="/contact">Get in Touch <ArrowIcon /></a></div>

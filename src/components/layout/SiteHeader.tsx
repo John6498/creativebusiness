@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import siteLogo from '../../assets/blog.png'
 import SiteNavigation from './SiteNavigation'
 
 type SiteHeaderProps = {
@@ -13,9 +14,9 @@ function SiteHeader({ query, onQueryChange }: SiteHeaderProps) {
   return (
     <header className="relative z-10 mx-auto flex min-h-[88px] w-[min(1280px,calc(100%-72px))] shrink-0 items-center gap-[34px] max-[980px]:w-[min(calc(100%-48px),760px)] max-[980px]:gap-[22px] max-[700px]:min-h-[75px] max-[700px]:w-[calc(100%-36px)] max-[700px]:gap-3">
       <Link className="flex shrink-0 items-center gap-[14px] text-ink no-underline max-[700px]:gap-[9px]" to="/" aria-label="CBT home">
-        <span className="bg-[linear-gradient(110deg,#00d7e7_8%,#0868fa_50%,#112b76_92%)] bg-clip-text text-[39px] leading-none font-black text-transparent [-webkit-text-fill-color:transparent] max-[700px]:text-[33px]">CBT</span>
+        <img className="h-[39px] w-auto object-contain max-[700px]:h-[33px]" src={siteLogo} alt="CBT" />
         <span className="h-9 w-px bg-[#8bb9ff] max-[700px]:h-[30px]" />
-        <span className="text-[13px] leading-[1.2] font-bold max-[700px]:text-[11px]">Creative Business<br />of Technology</span>
+        <span className="font-display text-[16px] leading-[1.05] font-bold max-[700px]:text-[14px]">Creative Business<br />of Technology</span>
       </Link>
 
       <label className="flex h-[39px] w-[214px] items-center gap-[10px] rounded-[13px] bg-[#edf5ff] px-[13px] text-[#243b73] max-[980px]:ml-auto max-[980px]:w-[180px] max-[700px]:h-[39px] max-[700px]:w-[39px] max-[700px]:justify-center max-[700px]:bg-transparent max-[700px]:p-0 max-[700px]:has-[:focus]:absolute max-[700px]:has-[:focus]:right-[46px] max-[700px]:has-[:focus]:w-[min(220px,calc(100vw-210px))] max-[700px]:has-[:focus]:justify-start max-[700px]:has-[:focus]:bg-[#edf5ff] max-[700px]:has-[:focus]:px-3">

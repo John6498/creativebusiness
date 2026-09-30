@@ -1,5 +1,6 @@
 import Services from '../components/services/Services'
 import ArrowIcon from '../components/icons/ArrowIcon'
+import heroImage from '../assets/service.png'
 
 function HomePage({ query }: { query: string }) {
   return (
@@ -14,9 +15,9 @@ function HomePage({ query }: { query: string }) {
             <a className="inline-flex min-h-[47px] items-center justify-center gap-4 rounded-[18px] border border-[#5aa7ff] bg-white/70 px-[22px] text-[13px] font-bold text-ink no-underline transition hover:-translate-y-0.5 hover:bg-white" href="mailto:hello@cbt.tech">Start a Project <ArrowIcon /></a>
           </div>
         </div>
-        <div className="hero-image relative z-[1] h-[322px] min-w-0 overflow-hidden rounded-[18px] shadow-[0_20px_50px_rgba(38,103,174,.15)] [animation:rise-in_.65s_.12s_both] max-[980px]:h-[285px] max-[700px]:h-auto max-[700px]:aspect-[1.48] max-[700px]:rounded-[15px]" id="portfolio">
-          <img className="block h-full w-full object-cover object-center" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85" alt="Developer workspace with a laptop displaying code" />
-          <div className="absolute bottom-4 left-[19px] z-[1] flex items-center gap-2 text-[11px] font-semibold text-white"><span className="caption-dot h-[7px] w-[7px] rounded-full bg-[#09e3d3]" /> Thoughtful technology. Real-world impact.</div>
+        <div className="hero-image relative z-[1] aspect-[2.375] h-auto min-w-0 overflow-hidden rounded-[18px] shadow-[0_20px_50px_rgba(38,103,174,.15)] [animation:rise-in_.65s_.12s_both] max-[700px]:rounded-[15px]" id="portfolio">
+          <img className="block h-full w-full object-cover object-center" src={heroImage} alt="Laptop displaying code with web, cloud, analytics, and mobile icons in a bright workspace" />
+          <div className="absolute bottom-4 left-4 z-[1] flex items-center gap-2 rounded-full border border-white/80 bg-white/85 px-3 py-2 text-[11px] font-semibold text-[#17376e] shadow-sm backdrop-blur-sm max-[700px]:bottom-3 max-[700px]:left-3 max-[700px]:text-[10px]"><span className="caption-dot h-[7px] w-[7px] rounded-full bg-[#09bfc9]" /> Thoughtful technology. Real-world impact.</div>
         </div>
       </section>
       <Services query={query} />

@@ -24,26 +24,26 @@ export function ContactIcon({ type }: { type: 'phone' | 'mail' | 'pin' | 'share'
 function ContactInformation() {
   return (
     <aside className="flex h-full flex-col rounded-xl border border-[#e4eef9] bg-white/90 p-5 shadow-[0_8px_24px_rgba(41,102,166,.08)] max-[980px]:p-4">
-      <p className="mb-1 text-[10px] font-extrabold tracking-[1.6px] text-[#168fe8] uppercase">Get in touch</p>
-      <h1 className="mb-2 text-[23px] leading-[1.08] font-extrabold text-ink">Our Contact<br />Information</h1>
-      <p className="mb-3 text-[10px] leading-[1.45] text-copy">You can reach us through any of the channels below. We’re always happy to help!</p>
+      <p className="mb-1 text-[1em] font-extrabold tracking-[1.6px] text-[#168fe8] uppercase">Get in touch</p>
+      <h1 className="mb-2 text-[3em] leading-[1.08] font-extrabold text-ink">Our Contact<br />Information</h1>
+      <p className="mb-3 text-[14px] leading-[1.45] text-copy">You can reach us through any of the channels below. We’re always happy to help!</p>
 
       <div className="space-y-2.5">
         {contactMethods.map((method) => (
-          <div className="flex items-start gap-3" key={method.type}>
-            <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-full ${contactIconStyles[method.accent]}`}><ContactIcon type={method.type} /></span>
+          <div className="flex items-center gap-3" key={method.type}>
+            <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${contactIconStyles[method.accent]}`}><ContactIcon type={method.type} /></span>
             <div className="pt-0.5">
-              <p className="text-[10px] font-bold text-[#17376e]">{method.label}</p>
-              {method.href ? <a className="block text-[10px] font-semibold text-brand no-underline" href={method.href}>{method.value}</a> : <p className="text-[9px] leading-[1.4] text-[#7186a8]">{method.value}<br />{method.detail}</p>}
-              {method.note && <p className="text-[8px] text-[#7a8eae]">{method.note}</p>}
+              <p className="text-[1em] font-bold text-[#17376e]">{method.label}</p>
+              {method.href ? <a className="block text-[14px] font-semibold text-brand no-underline" href={method.href}>{method.value}</a> : <p className="text-[14px] leading-[1.4] text-[#7186a8]">{method.value}<br />{method.detail}</p>}
+              {method.note && <p className="text-[12px] text-[#7a8eae]">{method.note}</p>}
             </div>
           </div>
         ))}
       </div>
 
       <div className="mt-3 flex items-center gap-2.5">
-        <span className="grid h-8 w-8 place-items-center rounded-full bg-[linear-gradient(145deg,#a052ff,#5632df)]"><ContactIcon type="share" /></span>
-        <div><p className="mb-1 text-[9px] font-bold text-[#17376e]">Follow Us</p><div className="flex gap-3 text-[12px] font-extrabold text-brand">{contactSocialLinks.map((social) => <a href={social.href} aria-label={social.label} key={social.label}>{social.text}</a>)}</div></div>
+        <span className="grid h-12 w-12 place-items-center rounded-full bg-[linear-gradient(145deg,#a052ff,#5632df)]"><ContactIcon type="share" /></span>
+        <div><p className="mb-1 text-[1em] font-bold text-[#17376e]">Follow Us</p><div className="flex gap-3 text-[12px] font-extrabold text-brand">{contactSocialLinks.map((social) => <a href={social.href} aria-label={social.label} key={social.label}>{social.text}</a>)}</div></div>
       </div>
     </aside>
   )

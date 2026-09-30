@@ -24,7 +24,7 @@ function AboutPage() {
         {aboutStats.map((stat, index) => (
           <article className="flex min-h-[88px] items-center gap-3 rounded-xl border border-[#e7f0fb] bg-white/85 px-4 py-3 shadow-[0_8px_24px_rgba(41,102,166,.07)] max-[980px]:gap-2 max-[980px]:px-2.5 max-[500px]:min-h-[76px]" key={stat.label}>
             <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-full text-white ${index % 3 === 1 ? 'bg-[linear-gradient(145deg,#9567ff,#4233ed)]' : index % 3 === 2 ? 'bg-[linear-gradient(145deg,#04d5de,#00aebf)]' : 'bg-[linear-gradient(145deg,#51a1ff,#086bff)]'}`}><LineIcon name={stat.icon} /></span>
-            <span className="min-w-0"><strong className="block text-[22px] leading-none font-extrabold text-[#112958] max-[700px]:text-[19px]">{stat.count}</strong><span className="mt-1 block text-[12px] font-semibold text-[#536b96]">{stat.label}</span><span className="mt-1 block text-[10px] leading-tight text-[#7186a8] max-[700px]:hidden">{stat.detail}</span></span>
+            <span className="min-w-0"><strong className="block text-[22px] leading-none font-extrabold text-[#112958] max-[700px]:text-[19px]">{stat.count}</strong><span className="mt-1 block text-[12px] font-semibold text-[#536b96]">{stat.label}</span><span className="mt-1 block text-[11px] leading-tight text-[#7186a8] max-[700px]:hidden">{stat.detail}</span></span>
           </article>
         ))}
       </section>
@@ -33,7 +33,7 @@ function AboutPage() {
         <div className="overflow-hidden rounded-lg max-[700px]:h-[180px]">
           <img className="h-[190px] min-h-0 w-full object-cover object-center max-[700px]:h-full" src={aboutStory.image} alt={aboutStory.imageAlt} />
         </div>
-        <div className="flex flex-col justify-center py-2">
+        <div className="flex flex-col justify-center px-2 py-2">
           <p className="mb-1 text-[12px] font-extrabold tracking-[1.6px] text-[#168fe8] uppercase">{aboutStory.eyebrow}</p>
           <h2 className="mb-1.5 text-[20px] leading-[1.06] font-extrabold text-ink max-[980px]:text-[18px]" id="story-title">{aboutStory.title[0]}<br />{aboutStory.title[1]}</h2>
           <p className="text-[13px] leading-[1.45] text-copy max-[700px]:text-[12px]">{aboutStory.description}</p>
